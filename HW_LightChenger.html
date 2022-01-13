@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LightChanger.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteiner"> 
+        <div id="c1" class="circle1"></div>
+        <div id="c2" class="circle2"></div>
+        <div id="c3" class="circle3"></div>
+    </div>
+    <button id="clickableButton">NEXT</button>
+
+<script>
+   var cnt = 0;
+
+   clickableButton.addEventListener("click", function(e){
+       
+       if(cnt == 3) {
+           cnt = 0; 
+       } 
+
+       ++cnt;
+
+       switch (cnt) {
+           case 1:
+           c1.style.backgroundColor = "green";
+           c2.style.backgroundColor = "grey";
+           c3.style.backgroundColor = "grey";
+           break;
+
+           case 2:
+           c1.style.backgroundColor = "grey";
+           c2.style.backgroundColor = "green";
+           c3.style.backgroundColor = "grey";
+           break;
+
+           case 3:
+           c1.style.backgroundColor = "grey";
+           c2.style.backgroundColor = "grey";
+           c3.style.backgroundColor = "green";
+           break;
+       }
+       /*if(cnt == 1){
+           c1.style.backgroundColor = "green";
+           c2.style.backgroundColor = "grey";
+           c3.style.backgroundColor = "grey";
+       }
+
+      else
+       if(cnt == 2){
+           c1.style.backgroundColor = "grey";
+           c2.style.backgroundColor = "green";
+           c3.style.backgroundColor = "grey";
+       }
+
+       else (cnt == 3){
+           c1.style.backgroundColor = "grey";
+           c2.style.backgroundColor = "grey";
+           c3.style.backgroundColor = "green";
+       }*/    
+   })
+</script>
+
+
+</body>
+</html>
